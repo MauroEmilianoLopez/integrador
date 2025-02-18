@@ -1,0 +1,98 @@
+body > header {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  gap: 6rem;
+  padding: 1.25rem 1rem;
+  align-items: flex-end;
+  background-color: var(--blanco);
+  /* background-image: linear-gradient(to top, var(--primario), var(--blanco)); */
+  box-shadow: 0 0.25rem 0.25rem 0 var(--sombra-oscura);
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 9;
+}
+
+body > header > picture {
+  position: absolute;
+  display: flex;
+  aspect-ratio: 1/1;
+  left: 50%;
+  width: 4rem;
+  border-radius: 50%;
+  box-shadow: 0 0 0.25rem 0 var(--sombra-oscura);
+  overflow: hidden;
+  transform-origin: center bottom;
+  transform: translateY(calc(50% + 1.25rem)) translateX(-50%);
+  background-color: var(--blanco);
+}
+
+body > header nav {
+  flex: 1;
+  display: flex;
+  gap: 1rem;
+}
+
+#navbar_left {
+  justify-content: flex-end;
+}
+#navbar_right {
+  justify-content: flex-start;
+}
+
+body > header nav a {
+  padding: 0.25rem 0.75rem;
+  background-color: var(--primario);
+  color: var(--blanco);
+  border-radius: 1rem;
+}
+
+#toolbar {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  body > header {
+    background-image: linear-gradient(to top, var(--primario), var(--blanco));
+    box-shadow: none;
+  }
+  #navbar_left,
+  #navbar_right {
+    display: none;
+  }
+  body > header > picture {
+    position: relative;
+    transform: none;
+    left: auto;
+  }
+  #toolbar {
+    display: flex;
+    flex: 1;
+    align-self: center;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  #navbar_mobile {
+    position: fixed;
+    top: calc(4rem + 2.5rem);
+    flex-direction: column;
+    right: 0;
+    padding: 1rem;
+    transform: translateX(100%);
+    transition: all 300ms ease-in-out;
+  }
+  #toolbar input[type="checkbox"] {
+    display: none;
+  }
+  #toolbar label[for="btnMenu"] {
+    padding: 0.25rem 0.75rem;
+    background-color: var(--primario);
+    color: var(--blanco);
+    border-radius: 1rem;
+    cursor: pointer;
+  }
+  #toolbar input[type="checkbox"]:checked ~ #navbar_mobile {
+    transform: translateX(0);
+  }
+}

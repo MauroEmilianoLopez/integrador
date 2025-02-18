@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+
+  <body id="inicio">
+    <header>
+      <nav id="navbar_left">
+        <a href="#inicio">Inicio</a>
+        <a href="ingresar.html">Login</a>
+        <a href="#plans">Envios</a>
+      </nav>
+      <picture>
+        <img src="images/logo.svg" alt="" />
+      </picture>
+      <nav id="navbar_right">
+        <a href="#qualities">Valores</a>
+        <a href="#history">Nosotros</a>
+        <a href="#contact">Contacto</a>
+      </nav>
+      <form id="toolbar">
+        <label for="btnMenu">Menu</label>
+        <input type="checkbox" id="btnMenu" />
+        <nav id="navbar_mobile">
+          <a href="#inicio">Inicio</a>
+          <a href="ingresar.html">Login</a>
+          <a href="#plans">Envios</a>
+          <a href="#qualities">Valores</a>
+          <a href="#history">Nosotros</a>
+          <a href="#contact">Contacto</a>
+        </nav>
+      </form>
+    </header>
+    <main>
+      <article>
+        <h1>COMPRAS EXPRESS</h1>
+        <h2>
+          Llegar a <mark>tiempo</mark> es cumplir con el <mark>cliente</mark>
+        </h2>
+      </article>
+    </main>
+    <section id="history">
+      <article>
+        <h2>Nuestra historia</h2>
+        <p>
+          Nuestro primer centro de logistica se ubicó y sigue estando
+          actulamente en San Luis capital. Los fundadores Eduardo Virgilio y
+          Emiliano Lopez son hoy en dia pioneros en el uso de IA para mejorar la
+          calidad del servicio tanto en la web como en su app, que actualmente
+          es la mas descargada en la región.Desde hace mas de 15 años a la
+          vanguardia e innovando dia a dia para ser los mejores.
+        </p>
+      </article>
+      <picture>
+        <img
+          src="https://images.unsplash.com/photo-1659353741787-aa888ce78a98?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt=""
+        />
+      </picture>
+    </section>
+    <section id="qualities">
+      <header>
+        <h2>Nuestros valores</h2>
+      </header>
+      <ul>
+        <li>
+          <picture>
+            <img src="images/ecofriendly.jpeg" alt="ecofriendly icono" />
+          </picture>
+          <h3>EcoFriendly</h3>
+          <p>
+            Creemos en un compromiso con el medio ambiente, por lo que todos
+            nuestros vehiculos a si como la paqueteria resulta amigable con el
+            planeta
+          </p>
+        </li>
+        <li>
+          <picture>
+            <img
+              src="images/elloguitomarketdeedu.svg"
+              alt="Puntos de recolección icono"
+            />
+          </picture>
+          <h3>Puntos de recolección</h3>
+          <p>
+            Puedes despachar los envios desde cualquiera de nuestros puntos de
+            envio, nosotros nos encargamos de llevarlo a sus clientes.
+          </p>
+        </li>
+        <li>
+          <picture>
+            <img src="images/seguridad1.jpg" alt="seguridad icono" />
+          </picture>
+          <h3>Seguridad</h3>
+          <p>
+            Tenemos lockers en varias puntos centrales, donde la seguridad es
+            nuestra prioridad, de esta forma solo tu cliente podra retirar el
+            envio.
+          </p>
+        </li>
+      </ul>
+    </section>
+    <section id="plans">
+      <header>
+        <h2>Nuestros Planes</h2>
+      </header>
+      <ul>
+        <li>
+          <picture>
+            <img src="images/mapainternacional.png" alt="" />
+          </picture>
+          <ul>
+            <li>
+              <h3>Internacional</h3>
+            </li>
+            <li>
+              <p>Envio a cualquier parte del mundo en menos de 1 semana</p>
+            </li>
+            <li>
+              <p>500 USD</p>
+            </li>
+          </ul>
+          <form>
+            <button type="button">Adquirir</button>
+          </form>
+        </li>
+        <li>
+          <picture class="picture-container">
+            <img src="images/mapanacional.png" alt="" />
+          </picture>
+          <ul>
+            <li>
+              <h3>Nacional</h3>
+            </li>
+            <li>
+              <p>Envio a cualquier parte del pais en menos de 48 hs</p>
+            </li>
+            <li>
+              <p>120 USD</p>
+            </li>
+          </ul>
+          <form>
+            <button type="button">Adquirir</button>
+          </form>
+        </li>
+        <li>
+          <picture class="picture-container">
+            <img src="images/mapalocal.jpg" alt="" />
+          </picture>
+          <ul>
+            <li>
+              <h3>Local</h3>
+            </li>
+            <li>
+              <p>Envio a cualquier parte de tu localidad en menos de 12 hs</p>
+            </li>
+            <li>
+              <p>50 USD</p>
+            </li>
+          </ul>
+          <form>
+            <button type="button">Adquirir</button>
+          </form>
+        </li>
+      </ul>
+    </section>
+    <section id="contact">
+      <ul>
+        <li>
+          <strong> Google Map </strong>
+          <a href="" target="_blank"> Como llegar </a>
+        </li>
+        <li>
+          <strong> Whatsapp </strong>
+          <a href="" target="_blank"> Escribenos </a>
+        </li>
+      </ul>
+      <form action="#" method="post">
+        <fieldset>
+          <label for="name">Nombre:</label>
+          <input type="text" id="name" name="name" required />
+        </fieldset>
+        <fieldset>
+          <label for="mail">Correo electronico:</label>
+          <input type="email" id="mail" name="mail" required />
+        </fieldset>
+        <fieldset>
+          <label for="msg">Mensaje:</label>
+          <textarea></textarea>
+        </fieldset>
+      </form>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,125 @@
+#qualities {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  align-content: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  background-image: linear-gradient(var(--negro), var(--primario));
+}
+#qualities header {
+  width: 100%;
+  background-color: var(--secundario);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+}
+
+#qualities header::before {
+  content: "";
+  width: 25%;
+  height: 0.25rem;
+  border-radius: 0.5rem;
+  background-color: var(--negro);
+}
+#qualities header::after {
+  content: "";
+  width: 25%;
+  height: 0.25rem;
+  border-radius: 0.5rem;
+  background-color: var(--negro);
+}
+#qualities header h2 {
+  text-transform: uppercase;
+  font-weight: 800;
+}
+#qualities ul {
+  width: calc(24% * 3 + 1.5rem);
+  display: flex;
+  flex-flow: row wrap;
+  list-style: none;
+  gap: 1rem;
+  justify-content: center;
+  align-content: flex-start;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+#qualities ul li {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: var(--sobra-clara-transparent);
+}
+#qualities ul li picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--blanco);
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 0.5rem;
+}
+#qualities ul li picture img {
+  width: 100%;
+  height: 100%;
+  object-position: center;
+  object-fit: contain;
+}
+#qualities ul li h3 {
+  width: calc(100% - 1rem);
+  background-color: var(--primario);
+  color: var(--blanco);
+  padding: 0.25rem;
+  text-align: center;
+  border-radius: 0.25rem;
+}
+#qualities ul li p {
+  flex: 1;
+  width: calc(100% - 1rem);
+  text-align: center;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  background-color: var(--blanco);
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+@media (max-width: 1024px) {
+  #qualities ul {
+    flex-flow: column;
+    justify-content: flex-start;
+    width: calc(100% - 1rem);
+    align-items: center;
+  }
+  #qualities ul li {
+    flex: auto;
+    height: auto;
+    width: calc(100% - 1rem);
+    aspect-ratio: 1/1;
+    padding-bottom: 1rem;
+  }
+  #qualities ul li p {
+    display: inline-block;
+    width: calc(100% - 1rem);
+  }
+  #qualities ul li picture {
+    height: 25vh;
+    aspect-ratio: auto;
+  }
+}
