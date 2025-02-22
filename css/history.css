@@ -3,18 +3,22 @@
   display: flex;
   flex-flow: row wrap;
   align-items: center;
+  justify-content: center;
   align-content: center;
   gap: 1rem;
   background-color: var(--negro);
 }
 #history article {
-  width: 50%;
+  width: 25%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
   gap: 1rem;
   padding: 1rem;
+  transform: translateX(-100%);
+  opacity: 0;
+  animation: slideInLeft 1s ease-in-out 250ms 1 forwards;
 }
 #history article > h2 {
   background-color: var(--primario);
@@ -25,7 +29,7 @@
 }
 
 #history article p {
-  width: 100%;
+  width: calc(100% - 1rem);
   border-radius: 1.25rem;
   background-color: var(--secundario);
   color: var(--negro);
@@ -34,21 +38,22 @@
 }
 
 #history picture {
+  width: 25%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex: 1;
-  padding: 20px;
-  border-radius: 8px;
+  border-radius: 50%;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  object-position: center;
+  transform: translateX(100%);
+  opacity: 0;
+  animation: slideInRight 1s ease-in-out 250ms 1 forwards;
 }
 
 #history picture img {
-  width: 100%;
-  height: 100%;
-  max-width: 100%;
-  max-height: 100%;
-  border-radius: 8px;
+  object-position: center;
   object-fit: cover;
 }
 
@@ -58,15 +63,40 @@
   }
   #history picture {
     display: none;
+    animation: none;
   }
   #history article {
     width: 100%;
     align-items: center;
     text-align: center;
+    animation: none;
+    opacity: 1;
+    transform: translateX(0);
   }
   #history article p {
     width: 100%;
     padding: 1rem;
     font-size: medium;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
   }
 }

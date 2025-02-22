@@ -7,6 +7,7 @@ body > main {
   justify-content: center;
   text-align: center;
   background-image: linear-gradient(var(--primario), var(--negro));
+  overflow: hidden;
 }
 
 body > main article {
@@ -21,6 +22,8 @@ body > main article {
   gap: 1rem;
   padding: 1rem;
   border-radius: 0.25rem;
+  transform: translateY(100dvh);
+  animation: slideInUp 1s ease-in-out 1s 1 forwards;
 }
 
 body > main h1 {
@@ -44,5 +47,18 @@ body > main h2 mark {
   }
   body > main h2 {
     line-height: 3rem;
+  }
+  body > main article {
+    transform: translateY(0);
+    animation: none;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(100dvh);
+  }
+  to {
+    transform: translateY(0);
   }
 }
