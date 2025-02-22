@@ -7,7 +7,6 @@
   align-content: flex-start;
   gap: 1rem;
   padding: 1rem;
-  margin-bottom: 2rem;
   background-image: linear-gradient(var(--primario), var(--blanco));
 }
 #plans header {
@@ -39,6 +38,7 @@
   text-transform: uppercase;
   font-weight: 800;
   color: var(--negro);
+  text-align: center;
 }
 #plans > ul {
   width: calc(25% * 3 + 1.5rem);
@@ -65,17 +65,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
   background-color: var(--blanco);
-  width: 50%;
+  height: 25dvh;
   aspect-ratio: 1/1;
+  overflow: hidden;
   border-radius: 0.5rem;
 }
 #plans > ul > li picture img {
   width: 100%;
   height: 100%;
   object-position: center;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 #plans > ul > li > ul {
@@ -114,7 +114,7 @@
 }
 
 #plans > ul > li form button {
-  padding: 0.25rem 0.75rem;
+  padding: 0.5rem 1.25rem;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -125,9 +125,12 @@
   cursor: pointer;
   text-transform: uppercase;
   border-radius: 0.25rem;
+  transform: scale(0.9);
+  transition: all 300ms ease-in-out;
 }
 #plans > ul > li form button:hover {
-  box-shadow: 0 0 0.5rem 0.2rem rgba(21, 21, 21, 0.7);
+  box-shadow: 0 0 0.5rem 0 rgba(21, 21, 21, 0.7);
+  transform: scale(1);
 }
 
 @media (max-width: 1024px) {

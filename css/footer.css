@@ -1,0 +1,9 @@
+body > footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 1rem;
+  color: var(--blanco);
+  padding: 1rem;
+}

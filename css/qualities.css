@@ -37,6 +37,8 @@
 #qualities header h2 {
   text-transform: uppercase;
   font-weight: 800;
+  color: var(--negro);
+  text-align: center;
 }
 #qualities ul {
   width: calc(24% * 3 + 1.5rem);
@@ -59,7 +61,8 @@
   gap: 1rem;
   border-radius: 1rem;
   overflow: hidden;
-  background-color: var(--sobra-clara-transparent);
+  background-color: var(--blanco);
+  aspect-ratio: 1 / 1;
 }
 #qualities ul li picture {
   display: flex;
